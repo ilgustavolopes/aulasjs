@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragDrop2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+        }
+        body{
+            background-color: aqua;
+            width:100vw;
+            height:100vh;
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            font-family: cursive;
+            font-size: 30px;
+        }
+        h1{
+            font-size:100px;
+            color:black;
+            font-family: cursive;
+        }
+        .divisona{
+            border: solid 2px black;
+            background-color: powderblue;
+            width:400px;
+            height:400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        /* #casa2{
+            background-color: brown;
+            width:400px;
+            height:400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #casa3{
+            background-color: brown;
+            width:400px;
+            height:400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Coloque o pato no sua casa, localizada no bairro dos animais:</h1>
+    <p>Casa do Pato:</p>
+    <div ondrop="drop(event)" ondragover="allowDrop(event)" class="divisona">
+
+    </div>
+    <p>Casa do Gato:</p>
+    <div ondrop="drop(event)" ondragover="allowDrop(event)" class="divisona">
+
+    </div>
+    <p>Casa do Cachorro:</p>
+    <div ondrop="drop(event)" ondragover="allowDrop(event)" class="divisona">
+
+    </div>
+    <img id="imagem" draggable="true" ondragstart="drag(event)" width="400" height="400" src="img/pato2.gif">
+    <script>
+         function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+</html>

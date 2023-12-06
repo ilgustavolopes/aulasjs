@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalização</title>
+    <style>
+        #map{
+            height:400px;
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- container -->
+    <video id="videoElement" width="400" height="300" autoplay></video><br>
+    <button onclick="startCamera()">Abrir Camera</button>
+    <button onclick="stopCamera()">Fechar Camera</button>
+
+    <p>Latitude: <span id="latitude"></span></p>
+    <p>Longitude: <span id="longitude"></span></p>
+    <div id="map">
+        <!-- mapa -->
+    </div>
+    <button onclick="getLocation()">Encontrar localização</button>
+    <!-- script -->
+    <script src="Js/API_geolocalizacao.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVDLBB8mGPN_2fBFVPWhMapmvt7yoRD4A&callback=initMap"></script>
+</body>
+</html>

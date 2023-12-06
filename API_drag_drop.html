@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DragDrop</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding:0;
+            margin:0;
+        }
+        body{
+            background-color: purple;
+            width:100vw;
+            height:100vh;
+            display: flex;
+            flex-direction: column;
+            gap:10px;
+            font-family: cursive;
+        }
+        h1{
+            font-size:100px;
+            color:white;
+            font-family: cursive;
+        }
+        .divisona{
+            border: solid white 5px;
+            width:100%;
+            height:1000px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url(img/agriculture\ cornfield\ field\ hd\ wallpaper.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .divisona2{
+            border: solid white 5px;
+            width:100%;
+            height:1000px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-image: url(img/Spiderman.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coloque o the rock em um dos retangulos:</h1>
+
+    <div ondrop="drop(event)" ondragover="allowDrop(event)" class="divisona">
+
+    </div>
+
+    <div ondrop="drop(event)" ondragover="allowDrop(event)" class="divisona2">
+
+    </div>
+
+    <img id="imagem" draggable="true" ondragstart="drag(event)" width="400" height="400" src="img/download (5).jpg">
+    
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</body>
+</html>

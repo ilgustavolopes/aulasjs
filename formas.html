@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas</title>
+</head>
+<body>
+    <canvas id="meuCanvas" width="400" height="400"></canvas>
+
+    <script>
+        var canvas = document.getElementById("meuCanvas");
+        var form = canvas.getContext("2d");//obtem a forma 2d para o seu desenho
+
+        form.beginPath();
+        form.moveTo(60,20);
+
+        form.lineTo(100,20);
+        form.lineTo(150, 100);
+        form.lineTo(20,100);
+        form.lineTo(60,20);
+
+        form.stroke();
+    </script>
+</body>
+</html>

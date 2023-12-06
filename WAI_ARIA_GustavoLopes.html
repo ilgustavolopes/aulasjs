@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <img src="img/download (5).jpg">
+    <br>
+        <label for="produtos">Produtos:</label>
+        <select id="produtos" aria-label="selecione um produto">
+            <option value="1">Caffè</option>
+            <option value="2">Faggiolo</option>
+            <option value="3">Riso</option>
+            <option value="4">Zucchero</option>
+        </select>
+        <p id="desc">Descrição do produto: <span id="descricao"></span> </p>
+    <style>
+        img{
+            margin-top:-30px;
+            width:300px;
+            height:300px;
+        }
+        h1{
+            font-family: cursive;
+            font-size: 50px;
+        }
+        body{
+            background-color: rgb(233, 200, 156);
+            font-family: cursive;
+            font-size:20px;
+        }
+        [aria-label]{
+            border: 2px solid blue;
+        }
+    </style>
+    <script>
+        produtos.addEventListener("change", () =>{
+            var produtos = document.getElementById("produtos");
+            var produtosSelecionado = produtos.options[produtos.selectedIndex].text;
+            console.log(produtosSelecionado);
+            if(produtosSelecionado == "Caffè"){
+                document.getElementById("descricao").innerHTML = "Caffè molto buono della Italia";
+            }else if(produtosSelecionado == "Faggiolo"){
+                document.getElementById("descricao").innerHTML = "Faggiolo molto buono della Italia";
+            }else if(produtosSelecionado == "Riso"){
+                document.getElementById("descricao").innerHTML = "Riso molto buono della Italia";
+            }else if(produtosSelecionado == "Zucchero"){
+                document.getElementById("descricao").innerHTML = "Zucchero molto buono e dolce della Italia";
+            }
+        });
+    </script>
+</body>
+</html>

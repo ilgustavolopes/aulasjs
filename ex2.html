@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+    <style>
+        body{
+            background-color: burlywood;
+        }
+        #myInput{
+            background-color: rgb(198, 198, 89);
+        }
+        p{
+            color:blueviolet;
+        }
+        img{
+           Width:250px;
+           height:250px;
+        }
+        #div{
+            background-color: rgb(151, 111, 63);
+            width: 100%;
+            margin:0;
+            font-size: 30px;
+            font-family: fantasy;
+        }
+        #myP{
+            font-size:30px;
+            font-family: fantasy;
+        }
+    </style>
+</head>
+<body onload = "loadFunction()"><!--quando abrir a page-->
+    <!--cabecalho-->
+    <div id="div">
+        <h1>Pagina do ex2</h1>
+    </div>
+    
+    <!--teste de eventos-->
+    <!--onblur-->
+    NOME: <input type="text" id="myInput" onblur="blurFunction()">
+    <br><br><br><br><br><br><br> 
+    <!-- on change -->
+    <p>Modificar texto</p>
+    Entre com o texto: <input type="text" name="txt" value="Hello world" 
+        onchange="myFunction(this.value)">
+    <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        ao pressionar esse texto com o mouse sua cor muda, ao clicar tambem</p>
+
+    <!--teste coordenada da imagem-->
+    <div onmouseover="coordenadasFigura(event)" onmouseout="clearCoor()">
+        <img src="../Aula 11/imagens/pato.gif">
+    </div>
+    <p id="demo3"></p>
+    
+    <!--puxando meu script-->
+    <script src="Js/script2.js"></script>
+</body>
+</html>

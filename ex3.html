@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3</title>
+    <style>
+        body{
+            background-color: rgb(231, 175, 91);
+        }
+        input{
+            width:700px;
+            height:40px;
+            margin-top:10px;
+            font-size: 30px;
+        }
+        form{
+            text-align: center;
+            margin-top:500px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../Aula 7/imagens2/instrumentos.jpg">
+    <!--fazendo formulario com botao delete e enviar-->
+    <form name="form1" action="" onsubmit="submitFunction(campo1,campo2)" method="post" onreset="alert('todos os campos serao apagados')">
+        Campo 1: <input type="text" size="10" name="campo1"><br><!--dois parametros cm1 cm2-->
+        Campo 2: <input type="text" size="10" name="campo2"><br>
+
+        <input type="submit" value="Entrar"> 
+        <input type="reset"> 
+    </form>
+    <!--setinterval=quero que aconteça varias vezes, possui dois parametros funcao e tempo milessgundos settimeout=acontece so uma vez-->
+    <script src="Js/script3.js"></script><!--chamei meu script-->
+</body>
+</html>

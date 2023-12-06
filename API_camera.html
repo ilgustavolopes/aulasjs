@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera</title>
+    <style>
+        body{
+            background-image:url(img/pato2.gif);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <video id="videoElement" width="400" height="300" autoplay></video>
+    <button onclick="startCamera()">Abrir Camera</button>
+    <button onclick="stopCamera()">Fechar Camera</button>
+
+    <script src="Js/scriptAPI_camera.js"></script>
+</body>
+</html>

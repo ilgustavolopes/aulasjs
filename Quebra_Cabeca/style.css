@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+.kanban{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:800px;
+}
+.bloco{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(242, 238, 175);
+}
+
+.coluna{
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.item{
+    background-color: rgb(235, 205, 205);
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.dragging{
+    opacity: 0.5;
+}
+
+.hover{
+    background-color: black;
+    transition: 1s;
+    opacity: 0.3;
+    border: 20px solid black;
+}
+h1{
+    font-size:50px;
+    font-family:cursive;
+    color:peru;
+}
+
+.bloco{
+    border: 2px solid black;
+}
+.form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    gap:10px;
+}

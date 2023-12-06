@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="meuCanvas" width="400" height="400">
+        
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("meuCanvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "red";
+
+        ctx.beginPath();
+        ctx.moveTo(50,50);
+        ctx.lineTo(100,30);
+        ctx.lineTo(100,20);
+        ctx.lineTo(200,30);
+        ctx.lineTo(110,-1000);
+        
+        
+        
+        ctx.stroke();
+    </script>
+</body>
+</html>

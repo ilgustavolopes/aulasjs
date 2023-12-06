@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index1</title>
+    <style>
+        body{
+            height:100vmax;
+           background:linear-gradient(to bottom, antiquewhite, rgb(224, 189, 144));
+        }
+    </style>
+</head>
+<body><!--js introducao-->
+    <h1>Introdução JAVAscript 2º semestre de 2023</h1>
+    <!--<p id="demo"></p>--><!--exemplo lendo vetor com for-->
+    <script>
+        //teste 1 basiquin
+        /*  
+            alert("Olá");//teste alert
+            prompt("Ciao tutto bene?");//teste prompt
+            var nome = prompt("Come ti chiami?");//variavel criada teste
+            console.log("voce digitou: " + nome);//variavel nome esta sendo escrita no console
+            //no JAVA seria:
+            String nome = "Zé";
+            syso(nome)
+            //
+
+            //alert("primeiro conteudo");
+            //alert("segundo conteudo");
+            console.log("primeiro conteudo no console");
+            console.log("segundo conteudo no console");
+        */
+       //teste 2 tipos
+       /*
+            //variaveis
+            var quantidade = 1;
+            var nome = "Gustavo Lopes";
+            var decimal = 1.34;
+            //vendo os tipos
+            console.log(typeof quantidade);//number
+            console.log(typeof nome);//string
+            console.log(typeof decimal);//number
+            //teste com boolean
+            var verdadeiro = true;
+            console.log(typeof verdadeiro);//boolean
+       */
+      //teste 3 conversao de tipos
+      /*
+            var numero1 = '5.55';
+            numero1 = parseFloat(numero1);//transforma numero 1(char) em (Float)
+            var numero2 = '1';
+            numero2 = parseInt(numero2);//transforma numero 2(char) em (int)
+            var resultado = numero1 + numero2;
+            //escrevendo
+            window.document.write("Tipo do dado " + numero1 + " = " + typeof(numero1) + "<br>");
+            window.document.write("Tipo do dado " + numero2 + " = " + typeof(numero2) + "<br>");
+            window.document.write("Resultado: " + resultado);
+      */
+     //teste 4 conversao de tipos toString
+     /*
+            var numero1 = '5.55';
+            numero1 = numero1.toString();//toString
+            var numero2 = '1';
+            numero2 = numero2.toString();//toString
+            var resultado = numero1 + numero2;
+            //escrevendo
+            window.document.write("Tipo do dado " + numero1 + " = " + typeof(numero1) + "<br>");
+            window.document.write("Tipo do dado " + numero2 + " = " + typeof(numero2) + "<br>");
+            window.document.write("Resultado: " + resultado);
+     */
+    //teste comparaçao de igualdade
+    /*
+            var diferente = (1!=1);
+            window.document.write(diferente);
+            var verdadeiro = (1!=2);
+            window.document.write(verdadeiro);
+    */  
+    //salario exemplo
+    /*
+        var salarioMensal = 1000;
+        var salarioAnual  = 13*salarioMensal + salarioMensal*0.10;
+        console.log(salarioAnual); 
+    */
+   //if else teste divisao
+   /*
+        var divisor = 2;
+        var dividendo = 10;
+        if(divisor != 0){
+            var resultado = dividendo / divisor;
+            console.log("sua divisao deu: "+resultado);
+        }else{
+            console.log("nao posso executar uma divisao por 0");
+        }
+   */
+  //if else com condiçao de "ou"
+  /*
+        var tipoDoFuncionario = "estagiario";
+        salarioMensal=700;
+        if(tipoDoFuncionario == "estagiario" || tipoDoFuncionario == "clt"){
+            if(salarioMensal > 0 && salarioMensal < 1000){
+                var salarioAnual = 13*salarioMensal + salarioMensal*0.05;
+                window.document.write(salarioAnual);
+            }else{
+                if(salarioMensal < 2000){
+                    var salarioAnual = 13*salarioMensal + salarioMensal*0.10;
+                    window.document.write(salarioAnual);
+                }
+            }
+        }
+  */
+  //switch dias
+  /*
+        var dia;
+        switch(new Date().getDay()){
+            case 0:
+                dia="domingo";
+                break;
+            case 1:
+                dia="segunda";
+                break;    
+            case 2:
+                dia="terça";
+                break;
+            case 3:
+                dia ="quarta";
+            case 4:
+                dia="quinta";
+                break;
+            case 5:
+                dia ="sexta";
+                break;
+            case 6:
+                dia="sabado";
+                break;    
+        }
+        window.document.write("Hoje é " + dia);      
+  */
+  //lendo vetor com for
+  /*
+        const carro = ["Fiat", "Volvo", "BMW"];
+        for(var i=0;i<carro.length;i++){
+            document.write(carro[i]+"<br>");
+        }
+        document.getElementById("demo").innerHTML = carro;
+  */
+  //chave foreach
+  /*
+        var txt = "";
+        var pessoa = {fname:"Jonh", name:"Jose", idade:25};
+        for(var x in pessoa){
+            txt = txt + " " + pessoa[x];
+        }
+        document.write(txt);
+        //ouuuu.....
+        //document.getElementById("meu_id").innerHTML = txt;
+        //tag <p> la em cima com esse id
+  */
+  //do while
+  /**/
+            var somapares = 0;
+            var i = 1;
+            while(true){
+                if(i % 2 != 0)
+                    window.document.write("<br>Valor de i: " + i);
+                    window.document.write("<br>Valor da soma: " + (somapares += i) + "<br>");     
+                    if (i == 10)
+                    break;
+                i++;
+                document.write("<br>Valor de i incrementado: " + i);
+                }
+            
+  /**/
+    </script>
+</body>
+</html>
